@@ -1,23 +1,14 @@
-import { NavLink, Outlet } from "react-router-dom";
+import "./layout.scss";
+import { Outlet } from "react-router-dom";
+import Header from "../Header";
+import Footer from "../Footer";
 
 export default function Layout() {
-    return (
-        <div>
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink to="/">
-                            Accueil
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/about">
-                            À propos
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
-            <Outlet />
-        </div>
-    )
+  return (
+    <div className="layout">
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
+  );
 }

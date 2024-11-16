@@ -1,0 +1,78 @@
+.room {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+
+  &__infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.875rem;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      &:last-child {
+        align-items: flex-end;
+      }
+    }
+  }
+
+  &__title {
+    color: #ff6060;
+    font-size: 2.25rem;
+    line-height: 3.2rem;
+    text-wrap: balance;
+  }
+
+  &__location {
+    font-size: 1.125rem;
+    line-height: 1.6rem;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 0.5rem 0.625rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    background-color: #ff6060;
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.1875rem 1.875rem 0.125rem;
+    border-radius: 0.625rem;
+    text-wrap: nowrap;
+  }
+
+  &__host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.625rem;
+
+    p {
+      color: #ff6060;
+      text-align: right;
+      font-size: 1.125rem;
+      line-height: 1.6rem;
+    }
+
+    img {
+      width: 4rem;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+}

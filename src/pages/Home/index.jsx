@@ -1,24 +1,23 @@
-import { Link } from 'react-router-dom';
-import rooms from '../../datas/logements.json';
+import rooms from "../../datas/logements.json";
+import Thumbnail from "../../components/Thumbnail";
+import "./home.scss";
 
 export default function Home() {
-
-    return (
-        <div>
-            <h1>Accueil</h1>
-            <section>
-                {rooms.map((room, index) => {
-                    return (
-                        <Link key={index} to={`/room/${room.id}`}>
-                            <article>
-                                <img src={room.cover} alt={room.title} />
-                                <h2>{room.title}</h2>
-                                <p>{room.description}</p>
-                            </article>
-                        </Link>
-                    )
-                })}
-            </section>
-        </div>
-    )
+  return (
+    <main>
+      <section className="hero">
+        <h1 className="hero__title">Chez vous, partout et ailleurs</h1>
+      </section>
+      <section className="rooms">
+        {rooms.map((room, index) => {
+          return (
+            <Thumbnail
+              key={index}
+              room={room}
+            />
+          );
+        })}
+      </section>
+    </main>
+  );
 }

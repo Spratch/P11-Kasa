@@ -3,6 +3,7 @@ import { Navigate, useParams } from "react-router-dom";
 import rooms from "../../datas/logements.json";
 import Carousel from "../../components/Carousel";
 import Star from "../../components/Star";
+import Dropdown from "../../components/Dropdown";
 
 export default function Room() {
   // Find the room with the id from the URL
@@ -14,8 +15,11 @@ export default function Room() {
 
   return (
     <main className="room">
+      {/* Carousel */}
       <Carousel pictures={room.pictures} />
-      <div className="room__infos">
+
+      {/* Infos */}
+      <section className="room__infos">
         <div>
           <div>
             <h1 className="room__title">{room.title}</h1>
@@ -51,7 +55,19 @@ export default function Room() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Description */}
+      <section className="room__description">
+        <Dropdown
+          title="Description"
+          content={room.description}
+        />
+        <Dropdown
+          title="Équipements"
+          content={room.equipments}
+        />
+      </section>
     </main>
   );
 }

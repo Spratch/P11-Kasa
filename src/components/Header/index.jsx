@@ -48,7 +48,7 @@ export default function Header() {
           to="/about"
           className="header__link"
         >
-          À propos
+          À&nbsp;propos
         </NavLink>
       </nav>
     </header>

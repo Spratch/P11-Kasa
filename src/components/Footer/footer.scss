@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .footer {
   background-color: #000;
   color: #fff;
@@ -6,5 +8,10 @@
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
-  padding: 2.5rem 0;
+  padding: 4.125rem 1.5rem 3.625rem;
+
+  @include from(md) {
+    gap: 1.75rem;
+    padding: 4.125rem 1.5rem 1.875rem;
+  }
 }

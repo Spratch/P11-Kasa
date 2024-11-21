@@ -1,8 +1,23 @@
+@import "../../styles/mixins";
+
 .layout {
   display: flex;
   flex-direction: column;
-  padding-top: 2.75rem;
-  gap: 3.125rem;
+  padding-top: 1.25rem;
+  gap: 1.6875rem;
   justify-content: space-between;
   min-height: 100vh;
+
+  @include from(md) {
+    padding-top: 2.75rem;
+    gap: 3.125rem;
+  }
+}
+
+main {
+  max-width: 77.5rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  flex-grow: 1;
 }

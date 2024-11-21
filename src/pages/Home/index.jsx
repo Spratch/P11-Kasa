@@ -1,13 +1,17 @@
 import rooms from "../../datas/logements.json";
 import Thumbnail from "../../components/Thumbnail";
 import "./home.scss";
+import Hero from "../../components/Hero";
 
 export default function Home() {
+  const title = "Chez vous, partout et ailleurs";
+  const img = "src/assets/hero-bg.jpg";
   return (
     <main>
-      <section className="hero">
-        <h1 className="hero__title">Chez vous, partout et ailleurs</h1>
-      </section>
+      <Hero
+        title={title}
+        img={img}
+      />
       <section className="rooms">
         {rooms.map((room, index) => {
           return (

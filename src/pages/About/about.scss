@@ -1,0 +1,13 @@
+@import "../../styles/mixins";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.1875rem;
+
+  @include from(md) {
+    gap: 1.875rem;
+    margin-top: 2.75rem;
+  }
+}

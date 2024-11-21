@@ -1,0 +1,79 @@
+@import "../../styles/mixins";
+
+.dropdown {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  max-width: 64rem;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 2.25rem;
+
+  @include from(md) {
+    min-height: 3.25rem;
+  }
+
+  &__button {
+    background-color: var(--red);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 0.75rem 0.625rem 0.625rem;
+    color: var(--white);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    border-radius: 0.3125rem;
+    z-index: 1;
+    position: absolute;
+
+    @include from(md) {
+      font-size: 1.125rem;
+      line-height: 1.6rem;
+      padding-right: 1.25rem;
+    }
+  }
+
+  &__content {
+    transition: all 0.3s ease-out, padding 0.2s ease-out;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    z-index: 0;
+    width: 100%;
+    top: 0;
+    background-color: var(--gray);
+    padding: 0 1.25rem 0 1.25rem;
+    font-size: 0.75rem;
+    line-height: 1.0625rem;
+
+    &--open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+      padding-top: 3.5rem;
+      padding-bottom: 1.1875rem;
+    }
+
+    @include from(md) {
+      font-size: 1.125rem;
+      line-height: 1.6rem;
+
+      &--open {
+        padding-top: 4.125rem;
+        padding-bottom: 1.25rem;
+      }
+    }
+  }
+
+  &__arrow {
+    transition: transform 0.3s ease-out;
+    width: 1rem;
+
+    @include from(md) {
+      width: 1.5rem;
+    }
+  }
+}

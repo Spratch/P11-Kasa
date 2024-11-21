@@ -1,0 +1,39 @@
+@import "../../styles/mixins";
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  max-height: 7rem;
+  width: 100%;
+  padding: 2rem 1rem;
+
+  @include from(md) {
+    border-radius: 1.5rem;
+    height: 14rem;
+    max-height: 14rem;
+    padding: 4rem;
+    justify-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    -webkit-text-stroke: var(--black) 1;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-wrap: balance;
+
+    @include from(md) {
+      font-size: 3rem;
+      line-height: 4.275rem;
+      text-align: center;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}

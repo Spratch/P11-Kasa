@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Room from "./pages/Room";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-import "./app.scss";
+import "../src/styles/main.scss";
 
 function App() {
   return (
